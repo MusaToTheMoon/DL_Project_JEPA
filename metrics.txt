@@ -1,0 +1,7 @@
+probe_normal val loss:  1.4716026782989502
+probe_wall val loss: 2.0202910900115967
+probe_wall_other val loss: 1.7319477796554565
+probe_expert val loss: 2.8953444957733154
+132,392
+python3 run.py
+

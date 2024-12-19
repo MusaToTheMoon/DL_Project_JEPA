@@ -1,7 +1,7 @@
 from dataset import create_wall_dataloader
 from evaluator import ProbingEvaluator
 import torch
-from models import MockModel
+from models import Prober, NonRecurrentJEPA 
 import glob
 
 
@@ -76,8 +76,14 @@ def load_expert_data(device):
 
 def load_model():
     """Load or initialize the model."""
-    # TODO: Replace MockModel with your trained model
-    model = MockModel()
+    model = NonRecurrentJEPA(dropout_rate=0.1).to(device)
+
+    checkpoint_path = "best_model.pth"
+    try:
+        model.load_state_dict(torch.load(checkpoint_path, map_location=device))
+        print(f"Loaded model from {checkpoint_path}")
+    except FileNotFoundError:
+        print(f"No checkpoint found at {checkpoint_path}. Initializing a new model.")
     return model
 
 
@@ -97,7 +103,6 @@ def evaluate_model(device, model, probe_train_ds, probe_val_ds):
     for probe_attr, loss in avg_losses.items():
         print(f"{probe_attr} loss: {loss}")
 
-
 if __name__ == "__main__":
     device = get_device()
     model = load_model()
@@ -110,3 +115,4 @@ if __name__ == "__main__":
 
     probe_train_expert_ds, probe_val_expert_ds = load_expert_data(device)
     evaluate_model(device, model, probe_train_expert_ds, probe_val_expert_ds)
+
