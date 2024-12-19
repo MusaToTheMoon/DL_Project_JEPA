@@ -1,4 +1,8 @@
-# CSCI-GA 2572 Final Project
+# NYU - Deep Learning (CSCI-GA 2572) Final Project
+**Course:** CSCI-GA 2572 - Deep Learning <br>
+**Instructors:** Yann LeCun, Alfredo Canziani <br>
+**Teaching Assistant:** Wancong Zhang <br>
+**Year:** 2024 <br>
 
 ## Overview
 
