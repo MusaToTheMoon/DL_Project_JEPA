@@ -4,6 +4,15 @@
 **Teaching Assistant:** Wancong Zhang <br>
 **Year:** 2024 <br>
 
+## Achievements
+This project was part of a class-wide competition for CSCI-GA 2572 - Deep Learning. <br> 
+Our team successfully secured the *2nd* place position among 36 teams, demonstrating the effectiveness of our approach and implementation.
+
+## Team 
+Our team consisted of two members: <br>
+*Musa Khan* - https://github.com/MusaToTheMoon <br> 
+*Mohamad Khair* - https://github.com/KhairKhair
+
 ## Overview
 
 In this project, you will train a JEPA world model on a set of pre-collected trajectories from a toy environment involving an agent in two rooms.
